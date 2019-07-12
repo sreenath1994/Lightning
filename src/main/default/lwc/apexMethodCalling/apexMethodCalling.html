@@ -4,8 +4,10 @@
             <template if:true={responseReturnVal}>
             <template for:each={accounts} for:item="account">
                 <li key={account.id}>
-                    
-
+                    <lightning-tile label={account.Name} type="media">
+                        <lightning-icon slot="media" icon-name="standard:account"></lightning-icon>
+                        <p class="slds-truncate" title={account.Phone}></p>
+                    </lightning-tile>
                 </li>
             </template>
             </template>
